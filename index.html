@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <h1 class="header__title">Movie App</h1>
+            <ul class="header__nav">
+               <li class="header__item header__item_active premieres">Премьеры месяца</li>
+               <li class="header__item expected">Топ ожидаемых</li>
+               <li class="header__item releases">Релизы месяца</li>
+               <li class="header__item popular">Топ лучшие</li>
+               <li class="header__item favorite">Избранные</li>
+            </ul>
+            <form class="header__form">
+                <input placeholder="Поиск" class="header__input" type="text">
+            </form>
+            <img class="burger__menu-btn" src="./images/menu.svg" alt="">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+       <div class="main__content">
+
+           <div class="main__list">
+
+           </div>
+           <div class="main__pagination">
+
+           </div>
+       </div>
+    </div>
+
+</main>
+<aside class="burger__menu">
+    <p class="burger-premieres burger__item burger__item_active">Премьеры месяца</p>
+    <p class="burger-expected burger__item">Топ ожидаемых</p>
+    <p class="burger-releases burger__item">Релизы месяца</p>
+    <p class="burger-popular burger__item">Топ лучшие</p>
+    <p class="burger-favorite burger__item">Избранные</p>
+
+</aside>
+<script src="script.js"></script>
+</body>
+</html>

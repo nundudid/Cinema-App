@@ -1,0 +1,471 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	list-style-type: none;
+	font-family: Lato, sans-serif;
+}
+
+
+html{
+	background: #1a191e;
+}
+.container{
+	width: 100%;
+	max-width: 1300px;
+
+	margin: 0 auto;
+
+}
+
+.header{
+	padding: 30px 10px;
+
+	border-bottom: 1px solid #FFFFFF;
+}
+.header__nav{
+	display: flex;
+	column-gap: 15px;
+	justify-content: center;
+
+}
+.header__item{
+	text-align: center;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-width: 160px;
+	width: 100%;
+
+	color: #FFFFFF;
+	background: #1a191e;
+
+	border: 1px solid #FFFFFF;
+	border-radius: 20px;
+
+	font-size: 16px;
+	padding: 10px;
+
+	&:hover{
+			background: gold;
+	}
+}
+
+.header__item_active{
+	color: black;
+	background: #FFFFFF;
+}
+
+
+.header__content{
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+.header__input{
+	padding: 10px 7px 10px 15px;
+	border: none;
+	outline: none;
+
+	border-radius: 5px;
+
+	min-width: 200px;
+
+	font-size: 15px;
+
+	font-weight: 600;
+}
+.header__title{
+	font-size: 35px;
+	color: #FFFFFF;
+	font-weight: 700;
+
+	cursor: pointer;
+	&:hover{
+			color: gold;
+	}
+}
+.main{
+	position: relative;
+}
+.main__content{
+	padding: 30px 10px;
+	min-height: 100vh;
+}
+.main__list{
+	display: flex;
+	flex-wrap: wrap;
+
+	gap: 50px 45px;
+
+
+}
+.main__item{
+	position: relative;
+	min-height: 416px;
+	width: calc(25% - 33.8px);
+
+}
+.main__item-img{
+	width: 100%;
+	min-height: 90%;
+}
+.main__item-title{
+	font-size: 16px;
+	color: #FFFFFF;
+	margin: 10px 0 5px;
+}
+.main__item-genres{
+	font-size: 15px;
+	color: gold;
+}
+.main__item-rating{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+
+	border-radius: 50%;
+	border: 1px solid palegoldenrod;
+	background: #1a191e;
+	color: #FFFFFF;
+
+	font-size: 16px;
+	padding: 10px;
+}
+.main__item-year{
+	position: absolute;
+	bottom: 10%;
+	right: 0;
+
+	border-radius: 8px 0 0 0;
+	padding: 8px;
+	background: #000000;
+	font-size: 28px;
+	color: #FFFFFF;
+}
+.main__pagination{
+	display: flex;
+	justify-content: center;
+	column-gap: 30px;
+
+	color: #FFFFFF;
+	margin-top: 50px;
+	font-size: 22px;
+}
+.main__pagination-count{
+	cursor: pointer;
+}
+.main__item-favorite{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+
+	font-size: 20px;
+
+	background: #FFFFFF;
+
+	color: black;
+	border: 1px solid palegoldenrod;
+	border-radius: 50%;
+
+	padding: 5px;
+
+	cursor: pointer;
+
+}
+.main__item-favorite_active{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+
+	font-size: 20px;
+
+	background: red;
+
+	color: white;
+	border: 1px solid palegoldenrod;
+	border-radius: 50%;
+
+	padding: 5px;
+
+}
+.main__item-empty{
+	color: #FFFFFF;
+	font-weight: 900;
+	font-size: 40px;
+	margin-top: 20px;
+}
+
+.main__item-heart{
+	width: 30px;
+}
+
+
+
+.burger__menu-btn{
+	width: 33px;
+	display: none;
+	cursor: pointer;
+	&:hover{
+			transform: scale(105%);
+	}
+}
+
+
+.burger__menu{
+	position: fixed;
+	z-index: 10000;
+	top: 117px;
+	right: -100%;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateX(-100%);
+	transition: .8s;
+	background: white;
+	flex-direction: column;
+
+	border-radius: 5px 0 0 5px;
+
+	width: 400px;
+	height: 100vh;
+}
+.burger__menu_active{
+
+	transition: .6s;
+	transform: translateX(0);
+
+	opacity: 1;
+	right: 0;
+
+	visibility: visible;
+}
+.burger__menu_active-fixed{
+	top: 0 !important;
+	transition: .6s;
+	transform: translateX(0);
+
+	opacity: 1;
+	right: 0;
+
+	visibility: visible;
+}
+
+
+.burger__item{
+	display: flex;
+	justify-content: center;
+
+	border-radius: 0;
+
+	color: black;
+	background: none;
+
+	padding: 35px 0;
+
+	border-bottom: 1px solid black;
+
+	font-weight: 600;
+
+	font-size: 20px;
+
+	cursor: pointer;
+	&:hover{
+			font-size: 21px;
+			color: gold;
+	}
+}
+.burger__item_active{
+	background: gold;
+	&:hover{
+			font-size: 21px;
+			color: white !important;
+	}
+	;
+}
+
+.burger__menu-title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	padding: 75px;
+
+}
+
+/*media*/
+
+
+@media screen and (max-width: 1300px) {
+	.header__item{
+			min-width: auto;
+			width: auto;
+			padding: 8px 15px;
+	}
+}
+@media screen and (max-width: 1180px) {
+	.header__input{
+			padding: 10px 7px 10px 15px;
+			width: 150px;
+			min-width: auto;
+	}
+}
+
+
+@media screen and (max-width: 1120px) {
+	.header__title{
+			min-width: 170px;
+	}
+	.header__input{
+			min-width: auto;
+			width: 100%;
+
+			padding: 17px 7px 17px 15px;
+
+			font-size: 18px;
+	}
+	.header__form{
+			width: 100%;
+	}
+	.header__nav{
+			display: none;
+	}
+	.header__content{
+			justify-content: normal;
+			align-items: center;
+
+			column-gap: 50px;
+	}
+	.burger__menu-btn{
+			display: block;
+			margin-left: auto;
+	}
+
+	.header{
+			padding: 30px 30px 30px 20px;
+	}
+
+}
+
+@media screen and (max-width: 973px) {
+	.header__title{
+			font-size: 33px;
+	}
+}
+
+
+@media screen and (max-width: 762px) {
+	.header__input{
+			padding: 12px 7px 12px 13px;
+	}
+	.header__title{
+			font-size: 30px;
+			min-width: 147px;
+	}
+	.burger__menu{
+			top: 105px
+	}
+}
+
+@media screen and (max-width: 670px) {
+	.header__input{
+
+			padding: 12px 7px 12px 13px;
+
+			font-size: 16px;
+	}
+	.header__title{
+			font-size: 30px;
+	}
+	.burger__menu-btn{
+			width: 28px;
+	}
+}
+
+@media screen and (max-width: 485px) {
+	.header__input{
+
+			padding: 12px 7px 12px 13px;
+
+			font-size: 16px;
+	}
+	.header__title{
+			display: none;
+	}
+	.burger__menu-btn{
+			width: 28px;
+	}
+}
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+	.main__item{
+	min-height: 300px;
+
+	}
+	.main__list{
+			gap: 70px 40px;
+	}
+	.main__content{
+			padding: 30px 20px;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.main__item{
+			width: calc(33.33% - 30px);
+	}
+	.main__list{
+			gap: 70px 30px;
+	}
+}
+@media screen and (max-width: 723px) {
+	.main__item{
+			width: calc(33.33% - 20px);
+	}
+
+	.main__item-year{
+			font-size: 24px;
+	}
+	.main__item-genres{
+			font-size: 14px;
+	}
+}
+@media screen and (max-width: 620px) {
+	.main__item{
+			width: calc(50% - 20px);
+	}
+	.main__item-empty{
+			font-size: 25px;
+	}
+}
+
+
+
+@media screen and (max-width: 420px) {
+	.main__list{
+			gap: 50px;
+	}
+	.main__item{
+			width: 80%;
+	}
+	.main__list{
+			justify-content: center;
+	}
+	.burger__menu{
+			width: 100%;
+	}
+
+}
